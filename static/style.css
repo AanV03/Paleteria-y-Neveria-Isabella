@@ -1,0 +1,417 @@
+/* Importar fuente divertida */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+/*DISEÑO GENERAL*/
+
+body {
+    font-family: 'fredoka One';
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
+    color: #5a2a27;
+}
+
+/* Encabezado */
+header {
+    background-color: #ff4081;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: #ffaac6;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    /* Centra los elementos en el eje horizontal */
+    align-items: center;
+    gap: 20px;
+    /* Espacio entre el logo y el título */
+    flex-wrap: wrap;
+    /* Asegura que los elementos se acomoden bien en pantallas pequeñas */
+}
+
+.logo {
+    height: 150px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #fce3e3;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    /* Permite que el título ocupe el espacio necesario */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-top: 20px;
+}
+
+nav ul li a,
+navBtn {
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background-color: #00c9a7;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover,
+navBtn:hover {
+    background-color: #00897b;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background: #ff4081;
+    color: white;
+    padding: 15px 0;
+    margin-top: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*DISEÑO DE INDEX.HTML*/
+
+/* Sección principal */
+.inicio {
+    padding: 80px 20px;
+}
+
+.inicio h2 {
+    font-size: 2.5em;
+    color: #ff4081;
+}
+
+.inicio p {
+    font-size: 1.3em;
+    color: #5a2a27;
+}
+
+/* Botón de inventario */
+.btn-nav {
+    padding: 15px 30px;
+    font-size: 1em;
+    color: white;
+    background: #00c9a7;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-nav:hover {
+    background: #00897b;
+}
+
+/* Botón de menu */
+.btn-menu {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: white;
+    background: #00c9a7;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-menu:hover {
+    background: #00897b;
+}
+
+
+
+/*DISEÑO de menu.html*/
+
+.contenedorBotones {
+    display: flex;
+    /* Usa flexbox para alinear los botones en línea */
+    justify-content: center;
+    /* Centra los botones horizontalmente */
+    flex-wrap: nowrap;
+    /* Evita que los botones se muevan a otra línea */
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.categoria-btn {
+    font-family: 'sniglet';
+    flex: 1;
+    /* Hace que todos los botones tengan el mismo tamaño */
+    height: 75px;
+    font-size: 2em;
+    color: white;
+    background: #00c9a7;
+    text-decoration: none;
+    border: none;
+    transition: 0.3s;
+    margin: 0;
+    /* Elimina el margen superior que los separa */
+}
+
+.categoria-btn:hover {
+    background: #00897b;
+}
+
+
+table {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
+}
+
+
+/* Contenedor de la tabla */
+.dataTables_wrapper {
+    margin: auto;
+    max-width: 1200px;
+    padding: 10px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dataTables_wrapper .dataTables_length {
+    float: left;
+    margin: 20px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+    margin: 20px;
+}
+
+.dataTables_wrapper .dataTables_info {
+    clear: both;
+    float: left;
+    padding-top: .755em;
+    margin: 20px;
+}
+
+
+/* Estilo de la tabla */
+#productosTable {
+    width: 100% !important;
+    /* Asegura que la tabla ocupe el 100% del contenedor */
+    table-layout: fixed;
+    /* Esto hace que las columnas no se expandan más allá del tamaño disponible */
+    overflow-x: auto;
+    /* Añade un scroll horizontal si la tabla se desborda */
+    border-collapse: collapse;
+}
+
+/* Encabezados */
+#productosTable thead {
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    color: white;
+    text-align: center;
+}
+
+#productosTable th {
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Filas alternas para mayor legibilidad */
+#productosTable tbody tr:nth-child(even) {
+    background-color: #fff5f8;
+}
+
+/* Efecto hover */
+#productosTable tbody tr:hover {
+    background-color: #ffd1dc;
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}
+
+/* Sombra ligera en la tabla */
+#productosTable {
+    box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+
+/* Estilo para paginación */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background: #ff85a2;
+    border-radius: 10px;
+    color: white !important;
+    margin-top: 20px;
+    padding: 8px 12px;
+    border: none;
+    font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #ff4081 !important;
+}
+
+/* Buscador */
+.dataTables_filter input {
+    border-radius: 15px;
+    border: 2px solid #ff85a2;
+    padding: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.dataTables_filter input:focus {
+    border-color: #ff4081;
+    box-shadow: 0 0 5px #ff85a2;
+}
+
+/* Estilo para el título del modal */
+.modal-header .modal-title {
+    font-size: 1.5em;
+    /* Aumentamos el tamaño del texto */
+    text-align: center;
+    /* Centra el texto */
+    flex-grow: 1;
+    /* Asegura que el título ocupe todo el espacio disponible */
+    margin: 0;
+    /* Elimina márgenes innecesarios */
+}
+
+
+/* contenido del modal para carrito: */
+.modal-content {
+    max-height: 80vh;
+    /* Limita la altura del cuerpo del modal */
+    overflow-y: auto;
+    /* Activa el scroll vertical si el contenido se desborda */
+}
+
+/* Estilo para las tablas dentro del modal */
+.tablemodal {
+    width: 100%;
+    /* Asegura que la tabla ocupe el 100% del contenedor */
+    table-layout: fixed;
+    /* Fija el ancho de las columnas */
+    border-collapse: collapse;
+    /* Evita los bordes dobles */
+    margin-bottom: 20px;
+}
+
+/* Encabezados de las tablas dentro del modal */
+.tablemodal th {
+    background-color: #ff85a282;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Celdas de las tablas dentro del modal */
+.tablemodal td {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Estilo de las filas alternas dentro del modal */
+.tablemodal tbody tr:nth-child(even) {
+    background-color: #ffe0e6;
+    /* Un tono más claro para las filas alternas */
+}
+
+/* Efecto hover sobre las filas de la tabla dentro del modal */
+.tablemodal tbody tr:hover {
+    background-color: #feadc496;
+}
+
+
+/* estilo para el footer del modal */
+.modal-footer {
+    display: flex;
+    /* Usamos flexbox para controlar el alineado */
+    justify-content: center;
+    /* Centra los botones horizontalmente */
+    gap: 20px;
+    /* Agrega un espacio de 20px entre los botones */
+    padding: 15px;
+    /* Puedes ajustar el padding para más espacio alrededor */
+}
+
+.modal-footer .btn {
+    padding: 12px 30px;
+    /* Aumentamos el tamaño de los botones */
+    font-size: 1.2em;
+    /* Aumentamos el tamaño de la fuente */
+    border-radius: 25px;
+    /* Un borde redondeado más grande para los botones */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+.modal-footer .btn:hover {
+    transform: translateY(-3px);
+    /* Efecto hover para que el botón suba ligeramente */
+}
+
+
+/*DISEÑO PARA INVENTARIO.HTML*/
+
+/* Asegura que los botones tengan el mismo tamaño */
+.btn {
+    width: 90%;
+    /* Los botones ocuparán todo el ancho disponible */
+}
+
+/* Efecto hover para los botones */
+.btn:hover {
+    opacity: 0.8;
+    /* Se hace más transparente al pasar el mouse */
+    transform: scale(1.05);
+    /* Agranda ligeramente el botón al hacer hover */
+    transition: transform 0.2s, opacity 0.2s;
+    /* Animación suave */
+}
+
+/* Opcionalmente, puedes personalizar los botones para que tengan un aspecto uniforme */
+.btn-add,
+.btn-remove {
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+    width: 80%;
+}
+
+.btn-add {
+    background: #00c9a7;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+}
+
+.btn-remove {
+    background: red;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+}
